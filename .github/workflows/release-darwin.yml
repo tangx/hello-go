@@ -8,8 +8,8 @@ on:
 jobs:
 
   build:
-    name: Build-Ubuntu
-    runs-on: ubuntu-latest
+    name: Build-macos
+    runs-on: macos-latest
     steps:
 
     - name: Set up Go 1.13
@@ -30,15 +30,15 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v -o hello_Linux_x86_64 . 
+      run: go build -v -o hello_Darwin_x86_64 . 
 
     - name: Say Hello
-      run: ./hello_Linux_x86_64
+      run: ./hello_Darwin_x86_64
     
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: linux-latest
+        automatic_release_tag: Darwin-latest
         prerelease: false
         files: |
           LICENSE.txt
