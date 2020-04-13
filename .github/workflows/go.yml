@@ -31,7 +31,13 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v -o hello-go_$(uname)_$(uname -m) . 
+      run: go build -v -o hello . 
 
     - name: Say Hello
-      run: ./hello-go_$(uname)_$(uname -m)
+      run: ./hello
+
+    - name: archive 
+      run: tar zcf hello.tar.gz hello
+      
+    - name: release binary
+      run: curl -X POST https://uploads.github.com/repos/tangx/hello-go/releases/1/assets?name=hello.tar.gz
