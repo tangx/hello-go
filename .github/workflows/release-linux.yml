@@ -32,10 +32,13 @@ jobs:
     - name: Build Linux
       run: go build -v -o hello_Linux_x86_64 . 
     - name: Build Darwin
-      run: CGO_ENABLED=0 GOOS=darwin  go build -v -o hello_Linux_x86_64 . 
-    - name: Build Darwin
+      run: CGO_ENABLED=0 GOOS=darwin  go build -v -o hello_Darwin_x86_64 . 
+    - name: Build Windows
       run: CGO_ENABLED=0 GOOS=windows go build -v -o hello_Windows_x86_64 . 
 
+    - name: List Floder
+      run: ls -al 
+      
     - name: Say Hello Test
       run: ./hello_Linux_x86_64
     
