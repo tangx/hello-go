@@ -8,8 +8,8 @@ on:
 jobs:
 
   build:
-    name: Build-Ubuntu
-    runs-on: ubuntu-latest
+    name: Build-macos
+    runs-on: macos-latest
     steps:
 
     - name: Set up Go 1.14
@@ -29,18 +29,10 @@ jobs:
             dep ensure
         fi
 
-    - name: Build Linux
-      run: go build -v -o hello_Linux_x86_64 . 
     - name: Build Darwin
-      run: CGO_ENABLED=0 GOOS=darwin  go build -v -o hello_Darwin_x86_64 . 
-    - name: Build Windows
-      run: CGO_ENABLED=0 GOOS=windows go build -v -o hello_Windows_x86_64 . 
-
-    - name: List Floder
-      run: ls -al 
-
-    - name: Say Hello Test
-      run: ./hello_Linux_x86_64
+      run: go build -v -o bin/hello_Darwin_x86_64 . 
+    - name: Build Linux
+      run: CGO_ENABLED=0 GOOS=linux  go build -v -o bin/hello_Linux_x86_64 . 
     
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -48,4 +40,4 @@ jobs:
         prerelease: false
         files: |
           LICENSE.txt
-          hello*
+          bin/*
