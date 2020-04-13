@@ -2,9 +2,8 @@ name: Go
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    tags: 
+      - "v*"
 
 jobs:
 
@@ -38,6 +37,11 @@ jobs:
 
     - name: archive 
       run: tar zcf hello.tar.gz hello
-      
-    - name: release binary
-      run: curl -X POST https://uploads.github.com/repos/tangx/hello-go/releases/1/assets?name=hello.tar.gz
+    
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          LICENSE.txt
+          hello
