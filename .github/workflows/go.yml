@@ -29,11 +29,9 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
-
-    - name: export env
-      run: export TAG=`uname`_`uname -r`
+        
     - name: Build
-      run: go build -v . -o ${TAG}
+      run: go build -v . -o hello-go_`uname`_`uname -r`
 
     - name: Say Hello
-      run: ./hello-go_${TAG} 
+      run: ./hello-go_`uname`_`uname -r`
