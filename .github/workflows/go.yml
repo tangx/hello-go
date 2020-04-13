@@ -31,7 +31,7 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v -o hello-go_`uname`_`uname -m` . 
+      run: go build -v -o hello-go_$(uname)_$(uname -m) . 
 
     - name: Say Hello
-      run: ./hello-go_`uname`_`uname -m`
+      run: ./hello-go_$(uname)_$(uname -m)
