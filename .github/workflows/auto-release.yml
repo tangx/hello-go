@@ -29,6 +29,9 @@ jobs:
             dep ensure
         fi
 
+    - name: Show Env
+      run: env
+      
     - name: Build Darwin
       run: go build -v -o bin/hello_Darwin_x86_64 . 
     - name: Build Linux
