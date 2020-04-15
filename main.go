@@ -16,3 +16,7 @@ func main() {
 	logrus.Fatal("logrus Fatal = ", int(logrus.FatalLevel))
 	logrus.Panic("logrus Panic = ", int(logrus.PanicLevel))
 }
+
+func Greet(who string) {
+	logrus.Infof("Hello, %s", who)
+}
