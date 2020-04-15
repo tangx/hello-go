@@ -16,16 +16,16 @@ hello-go 测试
 
 ```ts
 enum ConventionalCommitTypes {
-  feat = 'Features',
-  fix = 'Bug Fixes',
-  docs = 'Documentation',
-  style = 'Styles',
-  refactor = 'Code Refactoring',
-  perf = 'Performance Improvements',
-  test = 'Tests',
-  build = 'Builds',
-  ci = 'Continuous Integration',
-  chore = 'Chores',
-  revert = 'Reverts',
+  feat = 'Features', // 功能点
+  fix = 'Bug Fixes', // bug 修复
+  docs = 'Documentation', // 文档
+  style = 'Styles',  // 样式
+  refactor = 'Code Refactoring',  // 重构
+  perf = 'Performance Improvements', // 性能提升
+  test = 'Tests',  // 测试
+  build = 'Builds', // 编译
+  ci = 'Continuous Integration',  // CI
+  chore = 'Chores',  // 杂事
+  revert = 'Reverts',  // 回滚
 }
 ```
