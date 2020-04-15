@@ -40,10 +40,14 @@ jobs:
     - name: run shell
       run : /bin/bash build.sh
       
+    - name: Generate DRAFT.md
+      run: git log --pretty=format:"%h . %s" > DRAFT.md
+
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
+          DRAFT.md
           LICENSE.txt
           bin/*
