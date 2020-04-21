@@ -3,7 +3,6 @@ version: '3.1'
 services:
   db:
     image: mysql:5.7
-    # command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: V69Gz4wsysY
@@ -12,4 +11,7 @@ services:
     ports:
       - 3306:3306
     network_mode: default
-
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      # - --default-authentication-plugin=mysql_native_password
