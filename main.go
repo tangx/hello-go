@@ -4,9 +4,16 @@ import (
 	"fmt"
 
 	"github.com/sirupsen/logrus"
+	"github.com/tangx/go-querystring/query"
 )
 
 func main() {
+
+	var users = make(map[string]Person)
+
+	p1 := Person{"zhang", 10}
+	users["zhang"] = p1
+
 	logrus.Trace("logrus Trance = ", int(logrus.TraceLevel))
 	logrus.Debug("logrus debug = ", int(logrus.DebugLevel))
 	logrus.Info("logrus info = ", int(logrus.InfoLevel))
@@ -19,4 +26,12 @@ func main() {
 
 func Greet(who string) {
 	logrus.Infof("Hello, %s", who)
+
+	p := Person{"zhangsan", 20}
+	query.Values(p)
+}
+
+type Person struct {
+	Name string
+	Age  int
 }

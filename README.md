@@ -30,3 +30,9 @@ enum ConventionalCommitTypes {
 }
 ```
 
+
+## template
+
+在 `golang` 中， 有很多 template。
++ `html/template` 出于安全考虑， 会自动转义 `<` 之类的符号。
++ `text/template` 有什么是什么。
