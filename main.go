@@ -14,6 +14,11 @@ func main() {
 	p1 := Person{"zhang", 10}
 	users["zhang"] = p1
 
+	logger()
+}
+
+func logger() {
+
 	logrus.Trace("logrus Trance = ", int(logrus.TraceLevel))
 	logrus.Debug("logrus debug = ", int(logrus.DebugLevel))
 	logrus.Info("logrus info = ", int(logrus.InfoLevel))
@@ -23,7 +28,6 @@ func main() {
 	logrus.Fatal("logrus Fatal = ", int(logrus.FatalLevel))
 	logrus.Panic("logrus Panic = ", int(logrus.PanicLevel))
 }
-
 func Greet(who string) {
 	logrus.Infof("Hello, %s", who)
 
