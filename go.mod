@@ -3,6 +3,8 @@ module github.com/tangx/hello-go
 go 1.14
 
 require (
+	github.com/elastic/go-elasticsearch v0.0.0
+	github.com/elastic/go-elasticsearch/v7 v7.6.0
 	github.com/jinzhu/gorm v1.9.12
 	github.com/sirupsen/logrus v1.5.0
 	github.com/stretchr/testify v1.4.0 // indirect

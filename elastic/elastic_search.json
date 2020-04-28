@@ -1,0 +1,74 @@
+{
+    "took" : 2,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 1,
+      "successful" : 1,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 2,
+        "relation" : "eq"
+      },
+      "max_score" : 1.5686159,
+      "hits" : [
+        {
+          "_index" : "hawkeye",
+          "_type" : "_doc",
+          "_id" : "Qb8rwHEBMh4WOIXLF9w2",
+          "_score" : 1.5686159,
+          "_source" : {
+            "domain" : "qq.com",
+            "locked" : false,
+            "deleted_at" : null,
+            "fdsn" : "im.qq.com",
+            "updated_at" : "2020-04-28T11:10:12.000Z",
+            "@version" : "1",
+            "value" : "101.202.10.20",
+            "ttl" : 0,
+            "id" : 21,
+            "description" : "这是一个测试的域名接入， 没有任何意义。哈咯哈",
+            "@timestamp" : "2020-04-28T09:43:01.272Z",
+            "rr" : "im",
+            "record_id" : "Gxyy390dfh0s23",
+            "created_at" : "2020-04-28T11:10:12.000Z",
+            "status" : "",
+            "privider" : "",
+            "type" : "A",
+            "line" : "",
+            "priority" : 0
+          }
+        },
+        {
+          "_index" : "hawkeye",
+          "_type" : "_doc",
+          "_id" : "SL8rwHEBMh4WOIXLF9yn",
+          "_score" : 1.5686159,
+          "_source" : {
+            "domain" : "qq.com",
+            "locked" : false,
+            "deleted_at" : null,
+            "fdsn" : "im.qq.com",
+            "updated_at" : "2020-04-28T07:11:37.000Z",
+            "@version" : "1",
+            "value" : "101.202.10.20",
+            "ttl" : 0,
+            "id" : 20,
+            "description" : "",
+            "@timestamp" : "2020-04-28T09:43:01.268Z",
+            "rr" : "im",
+            "record_id" : "GGyy390dfh0s23",
+            "created_at" : "2020-04-28T07:11:37.000Z",
+            "status" : "",
+            "privider" : "",
+            "type" : "A",
+            "line" : "",
+            "priority" : 0
+          }
+        }
+      ]
+    }
+  }
+  
