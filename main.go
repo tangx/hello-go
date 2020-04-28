@@ -3,12 +3,13 @@ package main
 import (
 	"github.com/sirupsen/logrus"
 	"github.com/tangx/go-querystring/query"
-	"github.com/tangx/hello-go/logger"
+	"github.com/tangx/hello-go/elastic"
 )
 
 func main() {
 
-	logger.PrintLogLevel()
+	// logger.PrintLogLevel()
+	elastic.ESMain()
 
 }
 
