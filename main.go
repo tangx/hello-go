@@ -4,12 +4,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/tangx/go-querystring/query"
 	"github.com/tangx/hello-go/logger"
-	"github.com/tangx/hello-go/web"
 )
 
 func main() {
-
-	web.NewServer()
 
 	logger.PrintLogLevel()
 
