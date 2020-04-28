@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script 
+            src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+        </script>
+    </head>
+
+    <body>
+    <form  action="/hawkeye/search/elastic", method="get">
+        <input type="text" value="输入并搜索" name="query" id="query"/> 
+        <input type="submit" src="https://img.icons8.com/ios/50/000000/download-2.png" 
+        id="input_submit" >
+    </form>
+
+    <br><br>
+
+    <table id="result" class="display nowrap" style="width:100%">
+    <thead>
+        <!-- 表头 -->
+        <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>ZIP / Post code</th>
+        <th>Country</th>
+        </tr>
+        <!-- 内容 -->
+        <tr>
+        <th>123</th>
+        <th>zhang</th>
+        <th>li</th>
+        <th>wang</th>
+        <th>ergo</th>
+        </tr>
+    </thead>
+    </table>
+
+    </body>
+</html>
