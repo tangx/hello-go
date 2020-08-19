@@ -3,8 +3,10 @@ module github.com/tangx/hello-go
 go 1.14
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/elastic/go-elasticsearch/v7 v7.6.0
 	github.com/fatih/color v1.9.0
+	github.com/go-courier/semver v1.0.1
 	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
 	github.com/jinzhu/gorm v1.9.12
 	github.com/sirupsen/logrus v1.5.0
