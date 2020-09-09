@@ -1,0 +1,11 @@
+{
+    "debug":true,
+    "mirrors":[
+        "https://mirrors.aliyun.com",
+        "https://huaweiyun.com"
+    ],
+    "volumes":{
+        "data":"/dev/vda",
+        "data2":"dev/sdb"
+    }
+}
