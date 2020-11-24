@@ -16,6 +16,7 @@ var (
 		Host:           "127.0.0.1",
 		Port:           6379,
 		Password:       "",
+		DB:             3,
 		ConnectTimeout: envconf.Duration(30 * time.Minute),
 		ReadTimeout:    envconf.Duration(30 * time.Minute),
 	}

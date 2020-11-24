@@ -19,6 +19,7 @@ func main() {
 	if err := quick.Highlight(
 		os.Stdout, Dockerfile,
 		"Docker", "terminal", "vim"); err != nil {
+
 		panic(err)
 	}
 
