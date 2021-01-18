@@ -11,7 +11,7 @@ func main() {
 	i := 0
 	// cr := cron.New(cron.WithSeconds())
 	cr := cron.New()
-	spec := "* * * * * ?"
+	spec := "* * * * * "
 	id, err := cr.AddFunc(spec, func() {
 		i++
 		log.Println("logger ", i)
@@ -25,13 +25,17 @@ func main() {
 }
 
 func TestMain(t *testing.T) {
-	main()
+	go main2()
+	main2()
 }
 
 func main2() {
 	i := 0
 	p := cron.WithParser(cron.NewParser(
-		cron.Minute | cron.Hour | cron.Dom | cron.Month | cron.Dow,
+		// cron.SecondOptional 秒为可选项
+		cron.SecondOptional | cron.Minute | cron.Hour | cron.Dom | cron.Month | cron.Dow,
+		// cron.Second 秒为必选项
+		// cron.Second | cron.Minute | cron.Hour | cron.Dom | cron.Month | cron.Dow,
 	))
 
 	c := cron.New(p)
