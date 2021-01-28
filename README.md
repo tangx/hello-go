@@ -7,8 +7,10 @@ hello-go 测试
 ### golang 库
 
 + `highLight` ( github.com/alecthomas/chroma/quick ) : 彩色输出
-+ `goconvey` ( github.com/smartystreets/goconvey/convey ) : 代码测试
+<!-- + `goconvey` ( github.com/smartystreets/goconvey/convey ) : 代码测试 -->
++ `gomega` : 代码测试
 + `cronjob` ( github.com/robfig/cron/v3 ) : 定时任务
++ `cast` github.com/spf13/cast : 类型转换
 
 ## Commit Guide
 
